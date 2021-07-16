@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS ClassList</title>
+    <style>
+      /* We first of alll add some styles list that we can easily call on */
+      .blueFont {
+        color: blue;
+      }
+      .largeFont {
+        font-size: xx-large;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Below are two paragraphs we'll be styling by running the classList property in our script -->
+    <p id="edit">We should be to adjust this using JS</p>
+    <p id="larger">And we are going to make this text larger</p>
+
+    <script>
+      // here we use the getAttribute to "call the attention" of the html tags bearing those ids, then we assign them a variable name using "const", you could also use "let" or "var"
+      const edit = document.getElementById("edit");
+      const larger = document.getElementById("larger");
+      //after,we have "called their attention", the rest is smooth sailing,using the classlist property, we can 'add', 'remove' or even 'replace' alterations in our webpage.
+      edit.classList.add("blueFont");
+      larger.classList.add("largeFont","blueFont");
+    </script>
+  </body>
+</html>
