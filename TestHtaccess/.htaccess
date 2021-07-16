@@ -1,0 +1,3 @@
+# The hash symbol is a comment denotation
+# the Redirect 302 temporarily redirects the webpage to a different webpage
+Redirect 302 "http://learncode.nicholasidoko.com/"
