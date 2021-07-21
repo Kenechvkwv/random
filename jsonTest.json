@@ -1,0 +1,11 @@
+{
+    "firstName": "Alex",
+    "middleName": "Ifeanyi",
+    "lastName": "Tunde",
+    "address": {
+        "street": "NO 1 Loki",
+        "state": "Asgard"
+    },
+    "phoneNumber": 12346,
+    "age": 21
+}
