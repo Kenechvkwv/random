@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duplicate entry App</title>
+  </head>
+  <body>
+    <form action="database.php" method="POST">
+      <!-- name entry -->
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter name"
+        required
+      />
+      <label for="email">Email</label>
+      <!-- email entry -->
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter Email"
+        required
+      />
+      <label for="tel">Phone Number</label>
+      <!-- phone number entry -->
+      <input
+        type="tel"
+        id="tel"
+        name="tel"
+        placeholder="Enter Phone Number"
+        required
+      />
+      <input type="submit" name="submit" value="submit" />
+    </form>
+  </body>
+</html>
