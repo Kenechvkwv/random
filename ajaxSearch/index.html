@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find your Data</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <center>
+      <h3>This Page will search And display Data from the Table</h3>
+
+      <form action="javascript:void(0);">
+        Search User's Age and Occupation
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Search Name..."
+        />
+        <!-- <input type="submit" name="submit" value="search"> -->
+      </form>
+      <div id="output"></div>
+    </center>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#search").keyup(function () {
+          var query = $(this).val();
+          if (query != "") {
+            $.ajax({
+              url: "db.php",
+              method: "POST",
+              data: { query: query },
+            //   Note that data being sent to be processed is a query
+              success: function (data) {
+                $("#output").html(data);
+                $("#output").css("display", "block");
+
+                $("#search").focusout(function () {
+                  $("#output").css("display", "none");
+                });
+                $("#search").focusin(function () {
+                  $("#output").css("display", "block");
+                });
+              },
+            });
+          } else {
+            $("#output").css("display", "none");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
